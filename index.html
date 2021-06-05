@@ -6,39 +6,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book Library</title>
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
-  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link 
+    rel="stylesheet" 
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+    crossorigin="anonymous"
+  />
 
-  <script src="https://kit.fontawesome.com/52e1924adf.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+  <link 
+  href="https://fonts.googleapis.com/css?family=Lobster" 
+  rel="stylesheet" 
+  type="text/css"
+  />
 
-  
   <!--STYLESHEET-->
   <link rel="stylesheet" href="src/styles.css">
+  
+  <!-- ICONS -->
+  <script src="https://kit.fontawesome.com/52e1924adf.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="page-wrapper">
-    <header class="header">
-      <h1 id="h01">Book Library</h1>
-    </header>
-    <main id='main'>
-      <button id="newbook">New Book</button>
-      <div class="form-container">
-        <form id="form">
-          <label for="book-title">Book Title</label><br />
-          <input type="text" id="book-title" name="book-title" placeholder="input book-title" required><br />
-          <label for="book-author">Book author</label><br />
-          <input type="text" name="book-author" id="book-author" required><br />
-          <label for="num-of-pages">Number of Pages</label><br />
-          <input type="text" name="num-of-pages" id="num-of-pages" required><br />
-          <button id="checkbtn" type='button'>Read</button>
-          <button id="btn" type="submit">Submit</button>
+  <header class="header">
+    <h1 class="h01">Virtual Library</h1>
+  </header>
+  <main id='main'>
+    <button id="newbook" class="newbook-btn">+</button>
+    <div class="page-wrapper">
+      <section class="section">
+        <div class="table-container"></div>
+      </section>
+      <section class="form-container">
+        <form id="form" class="form">
+          <label for="book-title">Book Title:</label><br />
+          <input type="text" id="book-title" name="book-title" placeholder="Title..." required><br />
+          <label for="book-author">Book Author:</label><br />
+          <input type="text" name="book-author" id="book-author" placeholder="Author..." required><br />
+          <label for="num-of-pages">Number of Pages:</label><br />
+          <input type="text" name="num-of-pages" id="num-of-pages" placeholder="Pages"  required><br />
+          <label for="read">Have you read the book?</label><br />
+          <input type="text" name="read" id="read" placeholder="true or false..."  required><br />            
+          <button id="btn" type="submit">Add Book</button>
         </form>
-      </div>
+      </section>
       <div id="books-container"></div>
-  
-    </main>
-  </div>
+    </div>
+  </main>
+  <footer id="footer">
+    <p>Orbie&copy 2021</p>
+  </footer>
   <script src="src/script.js"></script>
 </body>
 </html>
