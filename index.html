@@ -20,7 +20,7 @@
   />
 
   <!--STYLESHEET-->
-  <link rel="stylesheet" href="src/styles.css">
+  <link rel="stylesheet" href="./src/scss/styles.css">
   
   <!-- ICONS -->
   <script src="https://kit.fontawesome.com/52e1924adf.js" crossorigin="anonymous"></script>
@@ -30,11 +30,7 @@
     <h1 class="h01">Virtual Library</h1>
   </header>
   <main id='main'>
-    <button id="newbook" class="newbook-btn">+</button>
     <div class="page-wrapper">
-      <section class="section">
-        <div class="table-container"></div>
-      </section>
       <section class="form-container">
         <form id="form" class="form">
           <label for="book-title">Book Title:</label><br />
@@ -48,11 +44,14 @@
           <button id="btn" type="submit">Add Book</button>
         </form>
       </section>
+      <section class="section">
+        <div class="table-container"></div>
+      </section>
       <div id="books-container"></div>
     </div>
   </main>
   <footer id="footer">
-    <p>Orbie&copy 2021</p>
+    <button id="plus-btn">+</button>
   </footer>
   <script src="src/script.js"></script>
 </body>
