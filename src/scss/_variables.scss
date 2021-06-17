@@ -1,0 +1,40 @@
+// Variables
+$width: 100%;
+$background-color: (
+  "light-pink": #f8eded,
+  "dark-pink": #e4bad4,
+  "dark-blue": midnightblue
+);
+
+@function background($color-name) {
+  @return map-get($background-color, $color-name);
+};
+
+$font-weight: (
+  'regular': 400,
+  'medium': 500,
+  'bold': 700,
+);
+
+@function weight($weight-type) {
+  @return map-get($font-weight, $weight-type);
+};
+
+@mixin flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+};
+
+@mixin buttonStyle($param1, $param2) {
+  outline: none !important;
+  border-style: solid;
+  background-color: background(dark-blue);
+  border-color: background(dark-blue);
+  font-weight: weight(bold);
+  color: background(light-pink);
+  border-radius: 3px;
+  padding: 7px;
+  float: $param1;
+  width: $param2
+}

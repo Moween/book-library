@@ -1,0 +1,191 @@
+@import './variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  background-color: background(light-pink);
+  height: 100vh;
+}
+
+header {
+  background-color: background(dark-pink);
+  font-family: lobster, serif;
+  width: $width;
+  .h01 {
+    padding: 10px;
+    margin-top: 0;
+    font-size: 2rem;
+  }
+}
+
+.page-wrapper {
+  width: $width - 20%;
+  margin: 0 auto;
+  padding-left: 20px; 
+  padding-right: 20px;
+
+  .form-container {
+    display: none;
+    background-color: background(dark-pink);
+    box-shadow: 5px 10px 18px background(dark-pink);
+    width: $width;    
+    border-radius: 5px;
+  }
+  
+  .form {
+    margin: 10px 5px;
+    padding: 15px 0 50px;  
+  
+    input[type='text'] {
+      width: $width;
+      background-color: background(dark-pink)!important;
+      padding: 5px;
+      border: none;
+      border-bottom: 2px solid black;
+      margin-bottom: 10px;
+
+      &:focus-visible {
+        background-color: white;
+      }
+    }
+    
+    
+    & label {
+      margin-bottom: 0;
+      font-weight: weight(bold);
+    }
+    
+    & button {
+      background-color: #f8eded;
+      border-color: #f8eded;
+      border-radius: 5px;
+      border-style: solid;
+      float: right;
+      font-weight: weight(bold)!important;
+      outline: none !important;
+      padding: 5px;
+      text-align: center;
+      margin: 10px 10px 20px;
+      width: 100px;
+    }
+  }
+}
+
+#plus-btn {
+  background-color: background(light-pink);
+  border-color: background(light-pink);
+  border-radius: 50%;
+  border-style: none;
+  width: 40px;
+  height: 40px;
+  font-weight: bold;
+  color: background(dark-blue);
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  font-size: 2rem;
+  margin: 0 2px 20px 2px;
+
+  @media (prefers-reduced-motion: no-preference) {
+    &:hover {
+      animation: btn-spin 3s 2s linear;
+    }
+  }
+
+  @keyframes btn-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+
+.no-content-display {
+  bottom: 0;  
+  position: absolute;
+  right: 20px;
+}
+
+.after-display {
+  position: absolute;
+  top: 60px;
+  right: 10%;
+  width: 30px;
+  height: 30px;
+  border-radius: 3%;
+}
+
+.section {
+  margin-top: 10px;
+
+  .table-container {
+    margin-bottom: 40px;
+    
+    table {
+      width: $width;
+      border-collapse: collapse;
+      
+      caption {
+        text-align: center;
+        font-weight: weight(bold);
+        color: black;
+      }
+  
+      th,
+      td {
+        padding: 5px;
+        text-align: left;
+        border-bottom: 1px solid black;
+    
+      }
+  
+      tr:hover {
+        background-color: #f5f5f5;
+      }
+    }
+  }
+}
+
+.flex-section {
+  @include flexbox;
+}
+
+#books-container {
+  clear: both;
+  margin-top: 50px;
+  @include flexbox; 
+
+  .book-card {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: background(dark-pink);
+    border-radius: 5px;
+  }
+  
+  .book-title {
+    margin-top: 10px;
+    font-weight: weight(bold);
+  }
+  
+  .book-author {
+    font-weight: weight(regular);
+  }
+  
+  & .read-btn {
+    @include buttonStyle(left, 100px);
+  }
+  
+  & .delete-btn {
+    @include buttonStyle(right, 50px);
+  }
+}

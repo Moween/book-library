@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  background-color: #f8eded;
+  height: 100vh;
+}
+
+header {
+  background-color: #e4bad4;
+  font-family: lobster, serif;
+  width: 100%;
+}
+
+header .h01 {
+  padding: 10px;
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.page-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.page-wrapper .form-container {
+  display: none;
+  background-color: #e4bad4;
+  -webkit-box-shadow: 5px 10px 18px #e4bad4;
+          box-shadow: 5px 10px 18px #e4bad4;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.page-wrapper .form {
+  margin: 10px 5px;
+  padding: 15px 0 50px;
+}
+
+.page-wrapper .form input[type='text'] {
+  width: 100%;
+  background-color: #e4bad4 !important;
+  padding: 5px;
+  border: none;
+  border-bottom: 2px solid black;
+  margin-bottom: 10px;
+}
+
+.page-wrapper .form input[type='text']:focus-visible {
+  background-color: white;
+}
+
+.page-wrapper .form label {
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+.page-wrapper .form button {
+  background-color: #f8eded;
+  border-color: #f8eded;
+  border-radius: 5px;
+  border-style: solid;
+  float: right;
+  font-weight: 700 !important;
+  outline: none !important;
+  padding: 5px;
+  text-align: center;
+  margin: 10px 10px 20px;
+  width: 100px;
+}
+
+#plus-btn {
+  background-color: #f8eded;
+  border-color: #f8eded;
+  border-radius: 50%;
+  border-style: none;
+  width: 40px;
+  height: 40px;
+  font-weight: bold;
+  color: midnightblue;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  font-size: 2rem;
+  margin: 0 2px 20px 2px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  #plus-btn:hover {
+    -webkit-animation: btn-spin 3s 2s linear;
+            animation: btn-spin 3s 2s linear;
+  }
+}
+
+@-webkit-keyframes btn-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+
+@keyframes btn-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+
+.no-content-display {
+  bottom: 0;
+  position: absolute;
+  right: 20px;
+}
+
+.after-display {
+  position: absolute;
+  top: 60px;
+  right: 10%;
+  width: 30px;
+  height: 30px;
+  border-radius: 3%;
+}
+
+.section {
+  margin-top: 10px;
+}
+
+.section .table-container {
+  margin-bottom: 40px;
+}
+
+.section .table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.section .table-container table caption {
+  text-align: center;
+  font-weight: 700;
+  color: black;
+}
+
+.section .table-container table th,
+.section .table-container table td {
+  padding: 5px;
+  text-align: left;
+  border-bottom: 1px solid black;
+}
+
+.section .table-container table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.flex-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#books-container {
+  clear: both;
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#books-container .book-card {
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #e4bad4;
+  border-radius: 5px;
+}
+
+#books-container .book-title {
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+#books-container .book-author {
+  font-weight: 400;
+}
+
+#books-container .read-btn {
+  outline: none !important;
+  border-style: solid;
+  background-color: midnightblue;
+  border-color: midnightblue;
+  font-weight: 700;
+  color: #f8eded;
+  border-radius: 3px;
+  padding: 7px;
+  float: left;
+  width: 100px;
+}
+
+#books-container .delete-btn {
+  outline: none !important;
+  border-style: solid;
+  background-color: midnightblue;
+  border-color: midnightblue;
+  font-weight: 700;
+  color: #f8eded;
+  border-radius: 3px;
+  padding: 7px;
+  float: right;
+  width: 50px;
+}
+/*# sourceMappingURL=styles.css.map */
